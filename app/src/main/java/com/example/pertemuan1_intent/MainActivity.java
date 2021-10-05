@@ -19,4 +19,9 @@ public class MainActivity extends AppCompatActivity {
         startActivity(v);
     }
 
+    public void segi3(View view){
+        Intent b = new Intent(MainActivity.this, Segi3.class);
+        startActivity(b);
+    }
+
 }
