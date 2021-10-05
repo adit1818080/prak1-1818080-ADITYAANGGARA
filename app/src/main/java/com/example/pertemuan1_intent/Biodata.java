@@ -14,28 +14,28 @@ public class Biodata extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_biodata);
+
+
+        final EditText edtNama = (EditText) findViewById(R.id.input_nama);
+        final EditText edtNim = (EditText) findViewById(R.id.input_nim);
+        final EditText edtJurusan = (EditText) findViewById(R.id.input_jur);
+        final EditText edtAngkatan = (EditText) findViewById(R.id.input_ang);
+        final TextView tvNama = (TextView) findViewById(R.id.output_nama);
+        final TextView tvNim = (TextView) findViewById(R.id.output_nim);
+        final TextView tvJurusan = (TextView) findViewById(R.id.output_jur);
+        final TextView tvAngkatan = (TextView) findViewById(R.id.output_ang);
+
+        final Button tampil = (Button)findViewById(R.id.tampil);
+        tampil.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                tvNama.setText(edtNama.getText().toString());
+                tvNim.setText(edtNim.getText().toString());
+                tvJurusan.setText(edtJurusan.getText().toString());
+                tvAngkatan.setText(edtAngkatan.getText().toString());
+            }
+        });
+
     }
-
-    final EditText edtNama = (EditText)findViewById(R.id.input_nama);
-    final EditText edtNim = (EditText)findViewById(R.id.input_nim);
-    final EditText edtJurusan = (EditText)findViewById(R.id.input_jur);
-    final EditText edtAngkatan = (EditText)findViewById(R.id.input_ang);
-    final TextView tvNama = (EditText)findViewById(R.id.output_nama);
-    final TextView tvNim = (EditText)findViewById(R.id.output_nim);
-    final TextView tvJurusan = (EditText)findViewById(R.id.output_jur);
-    final TextView tvAngkatan = (EditText)findViewById(R.id.output_ang);
-
-   final Button btnTampil= root.findViewById(R.id.tampil);
- btnTampil.setOnClickListener(new View.OnClickListener()
-    {
-        @Override public void onClick (View v){
-        tvNama.setText(edtNama.getText().toString());
-        tvNim.setText(edtNim.getText().toString());
-        tvJurusan.setText(edtJurusan.getText().toString());
-        tvAngkatan.setText(edtAngkatan.getText().toString())
-    }
-    });
- return root;
-
 
 }
